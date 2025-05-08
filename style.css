@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.message {
+    font-size: 2.5rem;
+    color: #ff1493;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.sub-message {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.balloon {
+    width: 80px;
+    height: 100px;
+    background-color: #ff6347;
+    border-radius: 50%;
+    position: absolute;
+    animation: floatUp 10s ease-in infinite;
+}
+
+#balloon1 {
+    left: 10%;
+    animation-delay: 2s;
+}
+
+#balloon2 {
+    left: 40%;
+    animation-delay: 4s;
+}
+
+#balloon3 {
+    left: 70%;
+    animation-delay: 6s;
+}
+
+.surprise-button {
+    background-color: #ff1493;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.surprise-button:hover {
+    background-color: #ff69b4;
+}
+
+.surprise-message {
+    display: none;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #ff1493;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
